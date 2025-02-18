@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <h1 id="app-title">Mon App Météo</h1>
+        <div id="language-flags">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French" data-lang="fr">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="English" data-lang="en">
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="search-box">
+        <div class="input-wrapper">
+          <input type="text" id="city-input" placeholder="Entrez une ville...">
+          <ul id="city-suggestions" class="suggestions-list hidden"></ul>
+        </div>
+        <button id="search-btn">Rechercher</button>
+      </div>
+
+      <p id="error-message" class="error-message hidden"></p>
+
+      <div class="weather-display">
+        <div id="weather-info" class="hidden">
+          <h2 id="city-name"></h2>
+          <p id="date"></p>
+          <div class="weather-main">
+            <img id="weather-icon" alt="Météo">
+            <p id="temperature"></p>
+          </div>
+          <p id="description"></p>
+          <div id="extra-info"></div>
+          <div class="forecast-container hidden" id="forecast-container">
+            <h3 class="forecast-title">Prévisions 7 jours</h3>
+            <div class="forecast-cards" id="forecast-cards"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
